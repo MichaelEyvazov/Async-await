@@ -2,6 +2,7 @@ let cocktailUrl = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
 let ingredientUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?i=';
 
 let cocktailNameElement = document.getElementById('cocktail-name');
+let cocktailImageElement = document.getElementById('cocktail-image');
 let ingredientsListElement = document.getElementById('ingredients-list');
 let searchButton = document.getElementById('search-button');
 let searchInput = document.getElementById('search-input');
@@ -11,7 +12,9 @@ async function getCocktailData() {
     let response = await fetch(cocktailUrl);
     let data = await response.json();
     let cocktail = data.drinks[0];
+    let cocktailImage = cocktail.strDrinkThumb;
     cocktailNameElement.textContent = cocktail.strDrink;
+    cocktailImageElement.src = cocktailImage;
     ingredientsListElement.innerHTML = '';
     for (let i = 1; i <= 15; i++) {
       if (cocktail[`strIngredient${i}`]) {

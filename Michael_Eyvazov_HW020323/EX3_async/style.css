@@ -79,3 +79,8 @@ ul {
 li {
     margin-bottom: 10px;
 }
+
+img {
+    height: 300px;
+    width: 300px;
+}
