@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #f0f0f0;
+  }
+  h1, h2, h3 ,div{
+    font-weight: bold;
+    text-align: center;
+  }
+  .green {
+    color: green;
+  }
+  
+  .red {
+    color: red;
+  }
+
+  #bitcoin-price {
+    font-size: 24px;
+    transition: all 0.5s ease-in-out;
+  }
